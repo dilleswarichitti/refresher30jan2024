@@ -1,0 +1,72 @@
+/* Add this to your CSS file or styled-components */
+
+html,
+body,
+#root {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+}
+
+.app {
+  width: 100%;
+  height: 100%;
+}
+
+.year {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.month {
+  width: calc(33.33% - 10px);
+  margin: 5px 0 15px 0;
+  padding: 10px;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f8f8f8;
+}
+
+.month:nth-child(3n) {
+  margin-right: 0; /* Ensure only the last month in each row has no right margin */
+}
+
+.month-name {
+  color: #ccbe88;
+  font-weight: bold;
+}
+
+.day {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  line-height: 30px;
+  margin:3px;
+}
+
+.date {
+  width: 30px;
+  height: 30px;
+  background: white;
+  border-radius: 50px;
+  border: none;
+  outline: none;
+  margin: 3px;
+}
+
+.date.in-month:hover {
+  cursor: pointer;
+  background: #ccbe88;
+}
+
+.today {
+  background: #ccbe88;
+}
+
+.date.prev-month,
+.date.next-month {
+  color: rgb(203, 202, 202);
+}

@@ -1,0 +1,86 @@
+
+.login-form {
+  /* max-width: 280px;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  background-color: #dac3dd;
+  background-image: url('C:\TRAINING\project\EventCalendarSol\Web API\EventCalendarAppSolution\React\calendar-app\public\Images\Background.jpg'); 
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 20px; /* Adjust as needed */
+  height: 420px; 
+  max-width: 320px;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+} 
+
+.login{
+  background-image: url('C:\Users\2000112419\Downloads\React\calendar-app\public\Images\Calendar.jpg'); 
+  background-repeat: no-repeat;
+  background-size: cover;
+/* Filter:blur(2px); */
+  Height:800px;
+}
+.form-group {
+  max-width: 300px;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  background-color: aliceblue;
+}
+
+
+.form-control {
+  margin-bottom: 10px;
+}
+
+.button {
+  background-color: #bf93c2;
+  color: #0b0909;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.button:hover {
+  background-color: #d0b6d5;
+}
+/* Example of adding background images to specific elements */
+/* .form-group {
+  background-image: url('C:\Users\dell\Pictures\calendar.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 20px; /* Adjust as needed */
+*/
+
+.btn-primary:hover,
+.btn-danger:hover {
+filter: brightness(90%);
+}
+/* .button {
+  background-image: url('C:\Users\dell\Pictures\calendar.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 10px; /* Adjust as needed */
+*/
+
+
+.login a {
+  color: #475e77;
+  text-decoration: none;
+}
+
+.login a:hover {
+  text-decoration: underline;
+}
