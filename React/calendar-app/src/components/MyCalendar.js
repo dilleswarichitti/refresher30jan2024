@@ -109,7 +109,7 @@ function MyCalendar({ events }) {
     <div className="calendar">
       <div
         className="search-container">
-        <input type="text" placeholder= "🔎Search Events" value={searchTerm} onChange={handleSearchChange} />
+        <input type="text" placeholder= "🔎 Search Events" value={searchTerm} onChange={handleSearchChange} />
         <select value={selectedCategory} onChange={handleCategoryChange}>
           <option value="">All Categories</option>
           <option value="work">Work</option>

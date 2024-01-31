@@ -31158,3 +31158,8 @@ FROM [Events] AS [e]
 SELECT [e].[Id], [e].[Access], [e].[Category], [e].[Description], [e].[Email], [e].[EndDateTime], [e].[IsRecurring], [e].[Location], [e].[NotificationDateTime], [e].[Recurring_frequency], [e].[ShareEventWith], [e].[StartDateTime], [e].[Title]
 FROM [Events] AS [e]
 2024-01-29 14:38:45,055 [.NET ThreadPool Worker] INFO EventCalendarApp.Controllers.EventController.Get[34] - Event listed
+2024-01-31 09:46:52,864 [1] INFO Microsoft.Hosting.Lifetime.?[?] - Now listening on: https://localhost:7117
+2024-01-31 09:46:55,799 [1] INFO Microsoft.Hosting.Lifetime.?[?] - Now listening on: http://localhost:5089
+2024-01-31 09:46:56,442 [1] INFO Microsoft.Hosting.Lifetime.OnApplicationStarted[0] - Application started. Press Ctrl+C to shut down.
+2024-01-31 09:46:56,715 [1] INFO Microsoft.Hosting.Lifetime.OnApplicationStarted[0] - Hosting environment: Development
+2024-01-31 09:46:58,405 [1] INFO Microsoft.Hosting.Lifetime.OnApplicationStarted[0] - Content root path: C:\Users\2000112419\Downloads\EventCalendarAppSolution\EventCalendarApp\

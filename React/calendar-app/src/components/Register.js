@@ -40,7 +40,7 @@ function Register() {
     }
 
     axios
-      .post('https://localhost:7211/api/User', {
+    .post('https://localhost:7117/api/User', {
         email: email,
         firstname: firstname,
         lastname: lastname,
@@ -86,7 +86,7 @@ function Register() {
               value={firstname}
 
               onChange={(e) => setFirstName(e.target.value)}
-              sx={{ marginBottom: 1 }}
+              sx={{ marginBottom: 2 }}
             />
             <TextField
               required
@@ -97,7 +97,7 @@ function Register() {
               autoComplete="family-name"
               value={lastname}
               onChange={(e) => setLastName(e.target.value)}
-              sx={{ marginBottom: 1 }}
+              sx={{ marginBottom: 2 }}
             />
             <TextField
               required
@@ -135,7 +135,7 @@ function Register() {
             <Grid container justifyContent="flex-end">
               <Grid item>
                 <Link href="/login" variant="body2">
-                  Already have an account? Sign in
+                  Already have an account?<strong>Sign in</strong>
                 </Link>
               </Grid>
             </Grid>

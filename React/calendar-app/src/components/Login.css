@@ -1,71 +1,63 @@
 
 .login{
-  max-width: 300px;
-  margin: auto;
-  padding: 20px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  background-color: #b493b4;
-  /* background-image: url('C:\Users\dell\Pictures\pur.jpg');  */
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+  background-color:white;
+    
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 
 .form-group {
-  max-width: 300px;
-  margin: auto;
+    max-width: 300px;
+    margin: auto;
 }
 
 .form-control {
-  margin-bottom: 10px;
+    margin-bottom: 10px;
 }
 
 
-.button {
-  background-color: #bf93c2;
-  color: #0b0909;
-  padding: 10px 15px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  margin-top: 10px;
+.Button {
+    background-color: #bf93c2;
+    color: #0b0909;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
 }
 
 .button:hover {
-  background-color: #d0b6d5;
+    background-color: #d0b6d5;
 }
 /* Example of adding background images to specific elements */
 /* .form-group {
-  background-image: url('C:\Users\dell\Pictures\calendar.jpg');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  padding: 20px; /* Adjust as needed */
+    background-image: url('C:\Users\dell\Pictures\calendar.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 20px; /* Adjust as needed */
 */
 
 .btn-primary:hover,
 .btn-danger:hover {
-filter: brightness(90%);
+  filter: brightness(90%);
 }
 /* .button {
-  background-image: url('C:\Users\dell\Pictures\calendar.jpg');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  padding: 10px; /* Adjust as needed */
+    background-image: url('C:\Users\dell\Pictures\calendar.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 10px; /* Adjust as needed */
 */
 
 
-.login a {
-  color: #475e77;
-  text-decoration: none;
-}
-
-.login a:hover {
-  text-decoration: underline;
-}
+  .login a {
+    color: #475e77;
+    text-decoration: none;
+  }
+  
+  .login a:hover {
+    text-decoration: underline;
+  }
