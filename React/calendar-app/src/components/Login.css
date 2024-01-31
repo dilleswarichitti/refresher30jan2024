@@ -1,45 +1,30 @@
 
-.login-form {
-  /* max-width: 280px;
-  margin: auto;
-  padding: 20px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  background-color: #dac3dd;
-  background-image: url('C:\TRAINING\project\EventCalendarSol\Web API\EventCalendarAppSolution\React\calendar-app\public\Images\Background.jpg'); 
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  padding: 20px; /* Adjust as needed */
-  height: 420px; 
-  max-width: 320px;
-  margin: auto;
-  padding: 20px;
-  border: 1px solid #ccc;
-  border-radius: 10px;
-} 
-
 .login{
-  background-image: url('C:\Users\2000112419\Downloads\React\calendar-app\public\Images\Calendar.jpg'); 
-  background-repeat: no-repeat;
-  background-size: cover;
-/* Filter:blur(2px); */
-  Height:800px;
-}
-.form-group {
   max-width: 300px;
   margin: auto;
   padding: 20px;
   border: 1px solid #ccc;
-  border-radius: 10px;
-  background-color: aliceblue;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  background-color: #b493b4;
+  /* background-image: url('C:\Users\dell\Pictures\pur.jpg');  */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
+
+.form-group {
+  max-width: 300px;
+  margin: auto;
+}
 
 .form-control {
   margin-bottom: 10px;
 }
+
 
 .button {
   background-color: #bf93c2;

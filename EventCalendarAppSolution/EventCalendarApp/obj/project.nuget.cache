@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "qzY+sxOFmsTCWuAxJeiRJt9Nu8tmdl+1To/dyNXdB2ZGkntcK7C4C9JVuu24K7jGFTB20yd0E/ea9DJLJAjZrQ==",
+  "dgSpecHash": "0adznzvYWk0/fh4cQExnabtIB1c6XaWKxaAb/je3B7EOBvoU5//EMIRe8FkCOLfMMe6/5wBH5Er0CcYMTdfE4w==",
   "success": true,
-  "projectFilePath": "C:\\Users\\2000112419\\Downloads\\react07Nov2023-master\\react07Nov2023-master\\EventCalendarSol\\Web API\\EventCalendarAppSolution\\EventCalendarApp\\EventCalendarApp.csproj",
+  "projectFilePath": "C:\\Users\\2000112419\\Downloads\\EventCalendarAppSolution\\EventCalendarApp\\EventCalendarApp.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\2000112419\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\2000112419\\.nuget\\packages\\log4net\\2.0.13\\log4net.2.0.13.nupkg.sha512",
