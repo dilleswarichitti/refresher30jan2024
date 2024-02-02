@@ -29,17 +29,17 @@ function UserProfile(){
 return(
     <div className="User">
     <div>
-        <form className="registerForms">
-            <label className="form-control">Email</label>
+        <form className="profile">
+            <label for = "email">📧 Email</label>
             <input type="text" className="form-control" value={user.email} disabled/>
            <br/>
-            <label className="form-control">FirstName</label>
+            <label for = "fname">FirstName</label>
                 <input type="text" className="form-control" value={user.firstName} disabled/>
              <br/>
-            <label className="form-control">LastName</label>
+            <label for = "lname">LastName</label>
                 <input type="text" className="form-control" value={user.lastName} disabled/>
              <br/>
-            <label className="form-control">Role</label>
+            <label for = "role">Role</label>
                 <input type="text" className="form-control" value={user.role} disabled/>
             <br/>
             

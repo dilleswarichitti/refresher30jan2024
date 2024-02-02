@@ -111,7 +111,11 @@ function Login() {
                 variant="contained"
                 color="primary"
                 onClick={login}
-                sx={{ mt: 3, mb: 2 }}
+                sx={{ mt: 3, mb: 2,
+                display:'flex',
+              alignItems:'center',
+            backgroundColor:'#009688',
+           }}
               >
                 Sign In
               </Button>

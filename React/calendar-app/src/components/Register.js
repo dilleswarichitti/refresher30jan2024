@@ -128,7 +128,11 @@ function Register() {
               type="submit"
               fullWidth
               variant="contained"
-              sx={{ mt: 3, mb: 2 }}
+              sx={{ mt: 3, mb: 2,
+                display:'flex',
+              alignItems:'center',
+            backgroundColor:'#009688',
+           }}
             >
               Sign Up
             </Button>
