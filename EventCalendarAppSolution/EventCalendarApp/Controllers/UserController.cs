@@ -72,5 +72,17 @@ namespace EventCalendarApp.Controllers
             }
             return BadRequest(errorMessage);
         }
+        [HttpPut("UpdateUser")]
+        public ActionResult UpdateUser(UserDTO userDTO)
+        {
+            var result = _userService.UpdateUser(userDTO);
+
+            if (result != null)
+            {
+                return Ok(result);
+            }
+
+            return NotFound("User not found or invalid current password");
+        }
     }
 }

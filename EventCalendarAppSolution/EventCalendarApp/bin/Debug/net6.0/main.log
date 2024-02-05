@@ -32205,3 +32205,42 @@ FROM [Users] AS [u]
 2024-02-02 11:35:52,968 [.NET ThreadPool Worker] INFO Microsoft.EntityFrameworkCore.Database.Command.?[?] - Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
 SELECT [u].[Email], [u].[FirstName], [u].[Key], [u].[LastName], [u].[Password], [u].[Role]
 FROM [Users] AS [u]
+2024-02-05 14:44:39,817 [1] INFO Microsoft.Hosting.Lifetime.?[?] - Now listening on: https://localhost:7117
+2024-02-05 14:44:40,510 [1] INFO Microsoft.Hosting.Lifetime.?[?] - Now listening on: http://localhost:5089
+2024-02-05 14:44:40,698 [1] INFO Microsoft.Hosting.Lifetime.OnApplicationStarted[0] - Application started. Press Ctrl+C to shut down.
+2024-02-05 14:44:40,872 [1] INFO Microsoft.Hosting.Lifetime.OnApplicationStarted[0] - Hosting environment: Development
+2024-02-05 14:44:41,498 [1] INFO Microsoft.Hosting.Lifetime.OnApplicationStarted[0] - Content root path: C:\Users\2000112419\Downloads\refresher30jan2024\EventCalendarAppSolution\EventCalendarApp\
+2024-02-05 16:09:24,272 [1] INFO Microsoft.Hosting.Lifetime.?[?] - Now listening on: https://localhost:7117
+2024-02-05 16:09:25,530 [1] INFO Microsoft.Hosting.Lifetime.?[?] - Now listening on: http://localhost:5089
+2024-02-05 16:09:25,703 [1] INFO Microsoft.Hosting.Lifetime.OnApplicationStarted[0] - Application started. Press Ctrl+C to shut down.
+2024-02-05 16:09:26,976 [1] INFO Microsoft.Hosting.Lifetime.OnApplicationStarted[0] - Hosting environment: Development
+2024-02-05 16:09:27,324 [1] INFO Microsoft.Hosting.Lifetime.OnApplicationStarted[0] - Content root path: C:\Users\2000112419\Downloads\refresher30jan2024\EventCalendarAppSolution\EventCalendarApp\
+2024-02-05 16:14:38,184 [1] INFO Microsoft.Hosting.Lifetime.?[?] - Now listening on: https://localhost:7117
+2024-02-05 16:14:41,909 [1] INFO Microsoft.Hosting.Lifetime.?[?] - Now listening on: http://localhost:5089
+2024-02-05 16:14:42,167 [1] INFO Microsoft.Hosting.Lifetime.OnApplicationStarted[0] - Application started. Press Ctrl+C to shut down.
+2024-02-05 16:14:42,607 [1] INFO Microsoft.Hosting.Lifetime.OnApplicationStarted[0] - Hosting environment: Development
+2024-02-05 16:14:42,703 [1] INFO Microsoft.Hosting.Lifetime.OnApplicationStarted[0] - Content root path: C:\Users\2000112419\Downloads\refresher30jan2024\EventCalendarAppSolution\EventCalendarApp\
+2024-02-05 16:17:43,343 [1] INFO Microsoft.Hosting.Lifetime.?[?] - Now listening on: https://localhost:7117
+2024-02-05 16:17:44,825 [1] INFO Microsoft.Hosting.Lifetime.?[?] - Now listening on: http://localhost:5089
+2024-02-05 16:17:45,145 [1] INFO Microsoft.Hosting.Lifetime.OnApplicationStarted[0] - Application started. Press Ctrl+C to shut down.
+2024-02-05 16:17:45,182 [1] INFO Microsoft.Hosting.Lifetime.OnApplicationStarted[0] - Hosting environment: Development
+2024-02-05 16:17:45,319 [1] INFO Microsoft.Hosting.Lifetime.OnApplicationStarted[0] - Content root path: C:\Users\2000112419\Downloads\refresher30jan2024\EventCalendarAppSolution\EventCalendarApp\
+2024-02-05 16:20:29,761 [.NET ThreadPool Worker] INFO Microsoft.EntityFrameworkCore.Infrastructure.?[?] - Entity Framework Core 6.0.24 initialized 'CalendarContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.24' with options: None
+2024-02-05 16:20:35,150 [.NET ThreadPool Worker] INFO Microsoft.EntityFrameworkCore.Database.Command.?[?] - Executed DbCommand (454ms) [Parameters=[@__key_0='?' (Size = 450)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(2) [u].[Email], [u].[FirstName], [u].[Key], [u].[LastName], [u].[Password], [u].[Role]
+FROM [Users] AS [u]
+WHERE [u].[Email] = @__key_0
+2024-02-05 16:20:35,427 [.NET ThreadPool Worker] INFO Microsoft.EntityFrameworkCore.Database.Command.?[?] - Executed DbCommand (15ms) [Parameters=[@__key_0='?' (Size = 450)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(2) [u].[Email], [u].[FirstName], [u].[Key], [u].[LastName], [u].[Password], [u].[Role]
+FROM [Users] AS [u]
+WHERE [u].[Email] = @__key_0
+2024-02-05 16:20:35,969 [.NET ThreadPool Worker] INFO Microsoft.EntityFrameworkCore.Database.Command.?[?] - Executed DbCommand (3ms) [Parameters=[@p5='?' (Size = 450), @p0='?' (Size = 4000), @p1='?' (Size = 8000) (DbType = Binary), @p2='?' (Size = 4000), @p3='?' (Size = 8000) (DbType = Binary), @p4='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+UPDATE [Users] SET [FirstName] = @p0, [Key] = @p1, [LastName] = @p2, [Password] = @p3, [Role] = @p4
+WHERE [Email] = @p5;
+SELECT @@ROWCOUNT;
+2024-02-05 16:21:25,705 [.NET ThreadPool Worker] INFO Microsoft.EntityFrameworkCore.Infrastructure.?[?] - Entity Framework Core 6.0.24 initialized 'CalendarContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.24' with options: None
+2024-02-05 16:21:25,895 [.NET ThreadPool Worker] INFO Microsoft.EntityFrameworkCore.Database.Command.?[?] - Executed DbCommand (1ms) [Parameters=[@__key_0='?' (Size = 450)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(2) [u].[Email], [u].[FirstName], [u].[Key], [u].[LastName], [u].[Password], [u].[Role]
+FROM [Users] AS [u]
+WHERE [u].[Email] = @__key_0
