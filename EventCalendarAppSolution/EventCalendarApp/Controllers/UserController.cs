@@ -72,5 +72,20 @@ namespace EventCalendarApp.Controllers
             }
             return BadRequest(errorMessage);
         }
+        [HttpPut("UpdateUser")]
+        public ActionResult UpdateUser(UserDTO userDTO)
+        {
+            string errorMessage = string.Empty;
+            try
+            {
+                var result = _userService.UpdateUser(userDTO);
+                return Ok(result);
+            }
+            catch(NoUsersAvailableException e)
+            {
+                errorMessage = e.Message;
+            }
+            return BadRequest(errorMessage);
+        }
     }
 }

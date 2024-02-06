@@ -21,13 +21,13 @@ function Menu(){
               <Link className="nav-link" to="/Events" ><strong>🗓Events</strong></Link>
             </li> : "" }
               {localStorage.getItem("token")? <li className="nav-item">
-              <Link className="nav-link" to="/GetAccess" ><strong>🔑GetAccess</strong></Link>
+              <Link className="nav-link" to="/GetAccess" ><strong>✔️GetAccess</strong></Link>
             </li> : "" }
             {localStorage.getItem("token")? <li className="nav-item">
               <Link className="nav-link" to="/Schedules" ><strong>🕔Schedules</strong></Link>
             </li> : "" }
             {localStorage.getItem("token")? <li className="nav-item">
-              <Link className="nav-link" to="/profile"><strong>👤Profile</strong></Link>
+              <Link className="nav-link" to="/profile"><strong>👥Profile</strong></Link>
             </li> : "" }
             {localStorage.getItem("token")? <li className="nav-item">
             <Link className="nav-link" onClick={logout}><strong>↪️logout</strong></Link>

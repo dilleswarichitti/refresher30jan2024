@@ -2,6 +2,8 @@
 using EventCalendarApp.Interfaces;
 using EventCalendarApp.Models;
 using EventCalendarApp.Models.DTOs;
+using EventCalendarApp.Repositories;
+using Microsoft.Extensions.Logging;
 using System.Security.Cryptography;
 using System.Text;
 
@@ -67,6 +69,25 @@ namespace EventCalendarApp.Services
             }
             return null;
         }
+
+        public UserDTO UpdateUser(UserDTO userDTO)
+        {
+            var existingUser = _repository.GetById(userDTO.Email);
+            if (existingUser != null)
+            {
+                existingUser.FirstName = userDTO.FirstName;
+                existingUser.LastName = userDTO.LastName;
+                HMACSHA512 hmac = new HMACSHA512(existingUser.Key);
+                existingUser.Password = hmac.ComputeHash(Encoding.UTF8.GetBytes(userDTO.Password));
+
+                var result = _repository.Update(existingUser);
+                if (result != null)
+                {
+                    userDTO.Password = ""; // Ensure you don't expose the password in the response
+                    return userDTO;
+                }
+            }
+            return null;
+        }
     }
 }
-

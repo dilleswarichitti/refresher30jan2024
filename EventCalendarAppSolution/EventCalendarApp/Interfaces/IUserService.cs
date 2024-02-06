@@ -8,5 +8,7 @@ namespace EventCalendarApp.Interfaces
         UserDTO Login(UserDTO userDTO);
         UserDTO Register(UserDTO userDTO);
         List<User> GetUser(string email);
+
+        UserDTO UpdateUser(UserDTO userDTO);
     } 
 }
