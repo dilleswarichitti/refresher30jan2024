@@ -286,3 +286,4 @@ C:\Users\2000112419\Downloads\EventCalendarAppSolution\EventCalendarApp\obj\Debu
 C:\Users\2000112419\Downloads\EventCalendarAppSolution\EventCalendarApp\obj\Debug\net6.0\EventCalendarApp.pdb
 C:\Users\2000112419\Downloads\EventCalendarAppSolution\EventCalendarApp\obj\Debug\net6.0\EventCalendarApp.genruntimeconfig.cache
 C:\Users\2000112419\Downloads\EventCalendarAppSolution\EventCalendarApp\obj\Debug\net6.0\ref\EventCalendarApp.dll
+C:\Users\2000112419\Downloads\EventCalendarAppSolution\EventCalendarApp\obj\Debug\net6.0\EventCalendarApp.sourcelink.json

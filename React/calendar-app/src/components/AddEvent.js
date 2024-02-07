@@ -10,7 +10,6 @@ import Container from '@mui/material/Container';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import { useState } from "react";
 import './AddEvent.css';
-import MenuItem from '@mui/material/MenuItem';
  
 const defaultTheme = createTheme();
  
@@ -21,7 +20,7 @@ function AddEvent() {
   const [enddatetime, setEndDateTime] = React.useState("");
   const [notificationdatetime, setNotificationDateTime] = React.useState("");
   const [location, setLocation] = React.useState("");
-  const [isrecurring, setIsRecurring] = React.useState(false);
+  const [isrecurring, setIsRecurring] = React.useState("");
   const [recurring_frequency, setRecurring_frequency] = React.useState("");
   const [shareeventwith, setShareEventWith] = React.useState("");
   const [access, setAccess] = React.useState("");
@@ -77,6 +76,7 @@ function AddEvent() {
   };
  
   return (
+    <div className='event'>
     <ThemeProvider theme={defaultTheme}>
       <Container component="main" maxWidth="xs">
         <CssBaseline />
@@ -86,6 +86,8 @@ function AddEvent() {
             display: 'flex',
             flexDirection: 'column',
             alignItems: 'center',
+            height: '80vh',
+            overflowY: 'auto'
           }}
         >
           <Box component="form" noValidate sx={{ mt: 1 }}>
@@ -101,60 +103,60 @@ function AddEvent() {
             />
             <TextField
               margin="normal"
+              required
               fullWidth
               id="description"
               label="Description"
               name="description"
               multiline
-              rows={4}
               value={description}
               onChange={(e) => { setDescription(e.target.value) }}
             />
-               <TextField
+            <TextField
               margin="normal"
+              required
               fullWidth
               id="startdatetime"
               label="StartDateTime"
+              type= "datetime-local"
               name="startdatetime"
-              multiline
-              rows={4}
               value={startdatetime}
               onChange={(e) => { setStartDateTime(e.target.value) }}
             />
             <TextField
               margin="normal"
+              required
               fullWidth
               id="enddatetime"
               label="EndDateTime"
+              type="datetime-local"
               name="enddatetime"
-              multiline
-              rows={4}
               value={enddatetime}
               onChange={(e) => { setEndDateTime(e.target.value) }}
             />
-               <TextField
+            <TextField
               margin="normal"
+              required
               fullWidth
               id="notificationdatetime"
               label="NotificationDateTime"
               name="notificationdatetime"
-              multiline
-              rows={4}
+              type = "datetime-local"
+      
               value={notificationdatetime}
               onChange={(e) => { setNotificationDateTime(e.target.value) }}
             />
-               <TextField
+            <TextField
               margin="normal"
               fullWidth
               id="location"
               label="Location"
               name="location"
               multiline
-              rows={4}
               value={location}
               onChange={(e) => { setLocation(e.target.value) }}
             />
-              <TextField
+            <TextField
               margin="normal"
               select
               fullWidth
@@ -163,29 +165,36 @@ function AddEvent() {
               name="isrecurring"
               value={isrecurring}
               onChange={(e) => { setIsRecurring(e.target.value) }}
+              SelectProps={{
+                native:true,
+              }}
             > 
-              <MenuItem value="none">None</MenuItem>
-              <MenuItem value="yes">Yes</MenuItem>
-              <MenuItem value="no">No</MenuItem>
+              <option value="none">None</option>
+              <option value="yes">Yes</option>
+              <option value="no">No</option>
             </TextField>
-            
-            <TextField
-              margin="normal"
-              select
-              fullWidth
-              id="recurring_frequency"
-              label="Recurring Frequency"
-              name="recurring_frequency"
-              value={recurring_frequency}
-              onChange={(e) => { setRecurring_frequency(e.target.value) }}
-              style={{ display: isrecurring ? 'block' : 'none' }}
-            >
-              <MenuItem value="none">None</MenuItem>
-              <MenuItem value="daily">EveryDay</MenuItem>
-              <MenuItem value="weekly">EveryWeek</MenuItem>
-              <MenuItem value="monthly">EveryMonth</MenuItem>
-              <MenuItem value="yearly">EveryYear</MenuItem>
-            </TextField>
+            {isrecurring === 'yes' && (
+               <TextField
+               margin="normal"
+               select
+               fullWidth
+               id="recurring_frequency"
+               label="Recurring Frequency"
+               name="recurring_frequency"
+               value={recurring_frequency}
+               onChange={(e) => { setRecurring_frequency(e.target.value) }}
+               style={{ display: isrecurring ? 'block' : 'none' }}
+               SelectProps={{
+                native:true,
+              }}
+             >
+               <option value="none">None</option>
+               <option value="daily">EveryDay</option>
+               <option value="weekly">EveryWeek</option>
+               <option value="monthly">EveryMonth</option>
+               <option value="yearly">EveryYear</option>
+             </TextField>
+            )}
             <TextField
               margin="normal"
               fullWidth
@@ -193,12 +202,12 @@ function AddEvent() {
               label="ShareEventWith"
               name="shareeventwith"
               multiline
-              rows={4}
               value={shareeventwith}
               onChange={(e) => { setShareEventWith(e.target.value) }}
             />
             <TextField
               margin="normal"
+              required
               select
               fullWidth
               id="access"
@@ -206,27 +215,33 @@ function AddEvent() {
               name="access"
               value={access}
               onChange={(e) => { setAccess(e.target.value) }}
+              SelectProps={{
+                native:true,
+              }}
             >
-              <MenuItem value="none">None</MenuItem>
-              <MenuItem value="public">Public</MenuItem>
-              <MenuItem value="private">Private</MenuItem>
+              <option value="none">None</option>
+              <option value="public">Public</option>
+              <option value="private">Private</option>
              
             </TextField>
             <TextField
               margin="normal"
               select
               fullWidth
-             
+              required
               id="category"
               label="Category"
               name="category"
               value={category}
               onChange={(e) => { setCategory(e.target.value) }}
+              SelectProps={{
+                native:true,
+              }}
             >
-              <MenuItem value="none">None</MenuItem>
-              <MenuItem value="work">Work</MenuItem>
-              <MenuItem value="family">Family</MenuItem>
-              <MenuItem value="personal">Personal</MenuItem>
+              <option value="none">None</option>
+              <option value="work">Work</option>
+              <option value="family">Family</option>
+              <option value="personal">Personal</option>
              
             </TextField>
            
@@ -245,6 +260,7 @@ function AddEvent() {
         </Box>
       </Container>
     </ThemeProvider>
+    </div>
   );
 }
 

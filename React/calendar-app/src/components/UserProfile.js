@@ -1,14 +1,17 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
+import {useNavigate} from 'react-router-dom';
 import './UserProfile.css';
 
 function UserProfile(){
     const [user,setUser]=useState({});
+    const[oldpass,setOldpass]=useState("");
     const [password,setPassword]=useState("");
     const [repassword,setRePassword]=useState("");
     const [fname,setFName]=useState("");
     const [lname,setLName]=useState("");
     const [role,setRole]=useState("");
+    const navigate=useNavigate();
 
     useEffect(()=>{
         getUsers();
@@ -22,12 +25,11 @@ function UserProfile(){
           })
           .then((response) => {
             const posts = response.data[0];
-            console.log(posts);
             setUser(posts);
-            console.log(user);
             setFName(posts.firstName);
             setLName(posts.lastName);
             setRole(posts.role);
+            setOldpass(posts.password);
         })
         .catch(function (error) {
             console.log(error);
@@ -36,18 +38,21 @@ function UserProfile(){
     }
 
     const submit=()=>{
-        if(password===repassword){
-            axios.get('https://localhost:7117/api/User/UpdateUser',{
+        if(password===repassword || password===""){
+          if(password===""){
+            setPassword(oldpass);
+          }
+            axios.put('https://localhost:7117/api/User/UpdateUser',{
                 email: localStorage.getItem("email"),
                 firstName: fname,
                 lastName: lname,
                 password: password,
               })
           .then((response) => {
-            alert("success");
+            alert("password updated");
+            navigate("/events");
             })
             .catch(function (error) {
-                console.log(error);
                 alert("error");
             })
         }
@@ -79,12 +84,12 @@ return(
         <label for="email" class="placeholder">Email </label>
       </div>
       <div class="input-container ic2">
-        <input id="password" class="input" type="password" value={password} onChange={(e)=>{setPassword(e.target.value)}} />
+        <input id="password" class="input" type="password" placeholder=" " value={password} onChange={(e)=>{setPassword(e.target.value)}} />
         <div class="cut"></div>
         <label for="password" class="placeholder">Password</label>
       </div>
       <div class="input-container ic2">
-        <input id="repassword" class="input" type="password" value={repassword} onChange={(e)=>{setRePassword(e.target.value)}} />
+        <input id="repassword" class="input" type="password" placeholder=" "  value={repassword} onChange={(e)=>{setRePassword(e.target.value)}} />
         <div class="cut"></div>
         <label for="repassword" class="placeholder">Re-Password</label>
       </div>
