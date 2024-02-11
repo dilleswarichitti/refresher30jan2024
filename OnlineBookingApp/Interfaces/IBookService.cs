@@ -9,5 +9,6 @@ namespace OnlineBookingApp.Interfaces
         Books Add(Books books);
         Books Remove(int Id);
         Books Update(Books books); 
+        IList<Books> GetBookById(int Id);
     }
 }

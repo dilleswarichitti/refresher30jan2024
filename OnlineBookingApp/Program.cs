@@ -81,7 +81,7 @@ namespace OnlineBookingApp
                 opts.UseSqlServer(builder.Configuration.GetConnectionString("Conn"));
             });
 
-            builder.Logging.AddLog4Net();
+            //builder.Logging.AddLog4Net();
             #endregion
 
             #region UserDerfinedServices
@@ -90,6 +90,7 @@ namespace OnlineBookingApp
             builder.Services.AddScoped<IUserService, UserService>();
             builder.Services.AddScoped<ITokenService, TokenService>();
             builder.Services.AddScoped<IRepository<int, Books>, BookRepository>();
+            builder.Services.AddScoped<IBookService, BookService>();
             #endregion
             var app = builder.Build();
 

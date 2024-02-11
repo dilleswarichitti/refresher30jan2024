@@ -1,7 +1,10 @@
-﻿namespace OnlineBookingApp.Models
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace OnlineBookingApp.Models
 {
     public class Books
     {
+        [Key]
         public int BookId { get; set; } //identity GUID
         public string Title { get; set; }
         public string Description { get; set; }  

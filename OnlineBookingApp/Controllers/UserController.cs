@@ -1,8 +1,8 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using OnlineBookingApp.Exceptions;
 using OnlineBookingApp.Interfaces;
 using OnlineBookingApp.Models.DTOs;
-using OnlineBookingApp.Services;
 
 namespace OnlineBookingApp.Controllers
 {

@@ -1,4 +1,5 @@
-﻿using OnlineBookingApp.Interfaces;
+﻿using OnlineBookingApp.Exceptions;
+using OnlineBookingApp.Interfaces;
 using OnlineBookingApp.Models;
 using OnlineBookingApp.Models.DTOs;
 using System.Security.Cryptography;
@@ -56,7 +57,6 @@ namespace OnlineBookingApp.Services
                 Password = hmac.ComputeHash(Encoding.UTF8.GetBytes(userDTO.Password)),
                 Address=userDTO.Address,
                 PhoneNumber=userDTO.PhoneNumber,
-                Key = hmac.Key,
                 IsAdmin = userDTO.IsAdmin
             };
             var result = _repository.Add(user);
