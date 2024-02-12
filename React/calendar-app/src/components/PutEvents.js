@@ -52,7 +52,7 @@ function PutEvents({event}){
     }
     const Delete=()=>{
         console.log(Id)
-        axios.delete('https://localhost:7117/api/event',{
+        axios.delete('https://localhost:7117/api/Event',{
             params:{
                 Id:event.id
             }
@@ -70,69 +70,84 @@ function PutEvents({event}){
 
     return(
         <div className="inputcontainer">
-            <h1>Event</h1>
-            <br/>
-            {/*<label className="form-control" htmlFor="pId">Id</label>
-            <input id="pId" type="number" className="form-control" value={Id} onChange={(e)=>{setId(e.target.value)}}/>
-            <br/>*/}
-            <label className="form-control" htmlFor="ptitle">Title</label>
-            <input id="ptitle" type="text" className="form-control" value={title} onChange={(e)=>{setTitle(e.target.value)}}/>
-            <br/>
-            <label className="form-control" htmlFor="pdescription">Description</label>
-            <textarea id="pdescription" className="form-control" value={description} onChange={(e) => {setDescription(e.target.value)}}/>
-            <br/>
-            <label className="form-control"  htmlFor="pstartdatetime">StartDateTime</label>
-            <input id="pstartdatetime" type="datetime-local" className="form-control" value={startdatetime} onChange={(e)=>{setStartDateTime(e.target.value)}}/>
-            <br/>
-            <label className="form-control"  htmlFor="penddatetime">EndDateTime</label>
-            <input id="penddatetime" type="datetime-local" className="form-control" value={enddatetime} onChange={(e)=>{setEndDateTime(e.target.value)}}/>
-            <br/>  
-            <label className="form-control"  htmlFor="notificationdatetime">NotificationDateTime</label>
-            <input id="notificationdatetime" type="datetime-local" className="form-control" value={notificationdatetime} onChange={(e)=>{setNotificationDateTime(e.target.value)}}/>
-            <br/>
-            <label className="form-control"  htmlFor="plocation">Location</label>
-            <input id="plocation" type="text" className="form-control" value={location} onChange={(e)=>{setLocation(e.target.value)}}/>
-            <br/>
-            <label className="form-boolean">IsRecurring</label>
-            <select className="form-boolean" onChange={(e) => setIsRecurring(e.target.value === 'true')}>
-              <option value="false">No</option>
+            <h1>Events</h1>
+        <div class="input-container ic1">
+            <input id="title" class="input" type="text" value={title} onChange={(e)=>{setTitle(e.target.value)}}  />
+            <div class="cut"></div>
+            <label for="title" class="placeholder">Title</label>
+        </div>
+        <div class="input-container ic2">
+            <input id="description" class="input" type="text" value={description} onChange={(e)=>{setDescription(e.target.value)}} />
+            <div class="cut"></div>
+            <label for="description" class="placeholder">Description</label>
+        </div>
+        <div class="input-container ic1">
+            <input id="startdatetime" class="input" type="datetime-local" value={startdatetime} onChange={(e)=>{setStartDateTime(e.target.value)}}  />
+            <div class="cut"></div>
+            <label for="startdatetime" class="placeholder">StartDateTime</label>
+        </div>
+        <div class="input-container ic2">
+            <input id="enddatetime" class="input" type="datetime-local" value={enddatetime} onChange={(e)=>{setEndDateTime(e.target.value)}} />
+            <div class="cut"></div>
+            <label for="enddatetime" class="placeholder">EndDateTime</label>
+        </div>
+        <div class="input-container ic1">
+            <input id="notificationdatetime" class="input" type="datetime-local" value={notificationdatetime} onChange={(e)=>{setNotificationDateTime(e.target.value)}}  />
+            <div class="cut"></div>
+            <label for="notificationdatetime" class="placeholder">NotificationDateTime</label>
+        </div>
+        <div class="input-container ic2">
+            <input id="location" class="input" type="text" value={location} onChange={(e)=>{setLocation(e.target.value)}} />
+            <div class="cut"></div>
+            <label for="location" class="placeholder">Location</label>
+        </div>
+        <div class="input-container ic2">
+            <select id="recurring" class="input"  onChange={(e)=>setIsRecurring(e.target.value === 'true')} >
+            <option value="false">No</option>
               <option value="true">Yes</option>
             </select>
-            <br/>
+            <div class="cut"></div>
+            <label for="recurring" class="placeholder">IsRecurring</label>
+        </div>
             {isrecurring && (
             <div>
-                <br/>
-            <div className="form-group">
-            <label for="recurring_frequency">Recurring_frequency</label>
-            <select id="recurring_frequency" className="form-select" value={recurring_frequency}
-              onChange={(e) => setRecurring_frequency(e.target.value)}>
-              <option> Choose Recurrence--- </option>
-              <option value="everyday">EveryDay</option>
+                <div class="input-container ic2">
+            <select id="recurring_frequency" class="input"  onChange={(e)=>setRecurring_frequency(e.target.value)} >
+            <option value="everyday">EveryDay</option>
               <option value="everyweek">EveryWeek</option>
               <option value="everymonth">EveryMonth</option>
               <option value="everyyear">EveryYear</option>
             </select>
-            </div>
+            <div class="cut"></div>
+            <label for="recurring_frequency" class="placeholder">Recurring_frequency</label>
+        </div>
             </div>
             )}
             <br/>
-            <label className="form-control"  htmlFor="paccess">Access</label>
-            <select className="form-select" value={access} onChange={(e) => setAccess(e.target.value)}>
-            <option> Choose Access--- </option>  
-            <option value="public">Public</option>
-            <option value="private">Private</option>
+            
+        <div class="input-container ic2">
+            <select id="access" class="input"  onChange={(e)=>setAccess(e.target.value )} >
+            <option value="choose here....">choose here....</option>
+              <option value="Public">Public</option>
+              <option value="Private">Private</option>
             </select>
+            <div class="cut"></div>
+            <label for="access" class="placeholder">Access</label>
+        </div>
             <br/>
-            <label className="form-control"  htmlFor="pcategory">Category</label>
-            <select className="form-select" value={category} onChange={(e)=>{setCategory(e.target.value)}}>
-            <option> Choose Category--- </option>  
-            <option value="work">Work</option>
-            <option value="family">Family</option>
-            <option value="personal">Personal</option>
+            <div class="input-container ic2">
+            <select id="category" class="input"  onChange={(e)=>setCategory(e.target.value )} >
+            <option value="choose here....">choose here....</option>
+              <option value="work">Work</option>
+              <option value="Family">Family</option>
+              <option value="personal">Personal</option>
             </select>
+            <div class="cut"></div>
+            <label for="category" class="placeholder">Category</label>
+        </div>
             <br/> 
-            <button onClick={clickAdd} className="btn btn-primary">Update Event</button>
-            <button onClick={Delete} className="btn btn-danger">Delete Event</button>
+            <button onClick={clickAdd} className=" btnput ">Update Event</button>
+            <button onClick={Delete} className="btnput">Delete Event</button>
        </div>
     );
 }

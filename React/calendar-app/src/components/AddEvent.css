@@ -5,29 +5,31 @@
   border: 1px solid #ccc;
   border-radius: 5px;
   text-align: center;
-  background-color: aliceblue;
+  background-color: rgb(255, 255, 255);
   overflow-y: scroll;
-  max-height: 500px;
+  max-height: 400px;
 }
 
 h1 {
-  font-size: 24px;
-  color:navy;
+  color:rgb(18, 18, 221);
 }
 
 .form-control {
   margin-bottom: 10px;
   font-size: 17px;
 }
-
-btn {
-  background-color: aqua; /* Cute Pink */
-  color: #fff;
-  padding: 10px 15px;
+.placeholder{
+  line-height: 11px;
+}
+.btnput {
+  background-color: #009688;
+  width: fit-content;
+  margin-right: 10px;
   border: none;
   border-radius: 3px;
   cursor: pointer;
   font-size: 16px;
+  height: 40px;
 }
 
 .btn:hover {
@@ -46,6 +48,14 @@ label {
   font-size: 17px;
   
 }
-.event{
-  background-color: white;
+.popup-content {
+  padding: 20px;
+}
+
+.TextField{
+  background-color:white;
+}
+.bg{
+  background-color: #fff;
+  height: 500px;
 }

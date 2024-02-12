@@ -42,7 +42,7 @@ function UserProfile(){
           if(password===""){
             setPassword(oldpass);
           }
-            axios.put('https://localhost:7117/api/User/UpdateUser',{
+            axios.put('https://localhost:7117/api/user/UpdateUser',{
                 email: localStorage.getItem("email"),
                 firstName: fname,
                 lastName: lname,

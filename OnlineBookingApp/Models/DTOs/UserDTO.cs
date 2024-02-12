@@ -6,8 +6,7 @@ namespace OnlineBookingApp.Models.DTOs
     {
         public int Id { get; set; }
         public string Username { get; set; }
-        [Required(ErrorMessage = "Email cannot be empty")]
-        public string Email { get; set; }
+        public string? Email { get; set; }
         [Required(ErrorMessage = "Password mandetory")]
         public string Password { get; set; }
         public string? PhoneNumber { get; set; }
